@@ -1,0 +1,59 @@
+<!-- Surya Reddy -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+   		<meta charset="utf-8" />
+   		<title> Asgn0: Matrix Libraries</title>
+	</head>
+
+	<body onload="main()">
+	   	<canvas id="asg0" width="400" height="400">
+	    Please use a browser that supports "canvas"
+	   	</canvas>
+	 	<br>
+
+	 	   <!-- add labels and input element for v1 -->
+	 	   <label for="v1">v1: x</label>
+	 	   <input type="text" id="xcoord" name="xcoord">
+	 	   <label for="v1"> y</label>
+	 	   <input type="text" id="ycoord" name="ycoord">
+	 	   <br>
+
+	 	   <!-- add labels and input element for v2 -->
+	 	   <label for="v1">v2: x</label>
+	 	   <input type="text" id="xcoord2" name="xcoord">
+	 	   <label for="v1"> y</label>
+	 	   <input type="text" id="ycoord2" name="ycoord">
+	 	   <br>
+
+	 	   <!-- add draw button -->
+	 	   <button onclick="handleDrawEvent()">Draw</button>
+	 	   <br> <br>
+
+	 	   <!-- add operation selector -->
+	 	   <label for="oper">Operation: </label>
+	 	   <select id="oper">
+	 	     	<option value="Add">Add</option>
+	 	     	<option value="Subtract">Subtract</option>
+	 	     	<option value="Multiply">Multiply</option>
+	 	     	<option value="Divide">Divide</option>
+	 	     	<option value="Mag">Magnitude</option>
+	 	     	<option value="Norm">Normalize</option>
+	 	     	<option value="Ang">Angle between</option>
+	 	     	<option value="Area">Area</option>
+	 	   </select>
+
+	 	   <!-- add scalar selector -->
+	 	   <label for="oper">Scalar: </label>
+	 	   <input type="text" id="scalar" name="scalar">
+	 	   <br>
+
+	 	   <!-- add second draw button to specify scalar -->
+	 	   <button onclick="handleDrawOperationEvent()">Draw</button>
+
+	<script src="lib/cuon-matrix-cse160.js"></script>
+	<script src="asg0.js"></script>
+	</body>
+</html>
+
+
