@@ -75,7 +75,7 @@ class Vector3 {
         // Insert your code here.
         // This function should change this vector (this.elements) and not create a new vector.
         for (var i = 0; i < 3; i++) {
-          this.elements[i] *= 1/scalar;
+          this.elements[i] *= (1/scalar);
         }
         // Don't delete the return statement.
         return this;
@@ -105,7 +105,7 @@ class Vector3 {
         var oth1 = other1.elements;
         var oth2 = other2.elements;
         for(var i = 0; i < 3; ++i){
-           d += oth1[i]*oth2[i];
+           d += (oth1[i]*oth2[i]);
         }
         // Don't delete the return statement.
         return d;
@@ -115,27 +115,19 @@ class Vector3 {
       * Calcualte the cross product between this vector and other.
       * @return new vector
       */
-    static cross(other1, other2) {
-      let v3 = new Vector3(); // Assuming Vector3 is the class to create a new vector.
+  static cross(other1, other2) {
       let oth1 = other1.elements;
       let oth2 = other2.elements;
 
       // Compute the cross product components
-      v3.x = oth1[1] * oth2[2] - oth1[2] * oth2[1];
-      v3.y = oth1[2] * oth2[0] - oth1[0] * oth2[2];
-      v3.z = oth1[0] * oth2[1] - oth1[1] * oth2[0];
+      let x = oth1[1] * oth2[2] - oth1[2] * oth2[1]; // Calculate x component
+      let y = oth1[2] * oth2[0] - oth1[0] * oth2[2]; // Calculate y component
+      let z = oth1[0] * oth2[1] - oth1[1] * oth2[0]; // Calculate z component
 
-      // Ensure correct orientation using the right-hand rule
-      let orientation = Math.sign(v3.x * oth1[0] + v3.y * oth1[1] + v3.z * oth1[2]);
-      if (orientation === -1) {
-        // Reverse the direction of the vector if needed
-        v3.x *= -1;
-        v3.y *= -1;
-        v3.z *= -1;
-      }
-
+      let v3 = new Vector3([x,y,z]); // Create a new vector with the cross product components.
+      
       return v3;
-  }
+      }
 
 
 
@@ -143,14 +135,15 @@ class Vector3 {
       * Calculate the magnitude (or length) of this vector.
       * @return scalar
       */
+
     magnitude() {
         // Insert your code here.
         let m = 0; // Modify this line to calculate this vector's magnitude.
         var v1 = this.elements;
         for(var i = 0; i < 3; ++i){
-           m += Math.pow(v1[i], 2);
+           m += Math.pow(v1[i], 2); // Sum of squares of vector elements.
         }
-        m = Math.pow(m, 0.5);
+        m = Math.pow(m, 0.5); // Take square root to get magnitude.
         // Don't delete the return statement.
         return m;
     };
@@ -165,7 +158,7 @@ class Vector3 {
         var v1 = this.elements;
         var magnitude = this.magnitude();
         for(var i = 0; i < 3; ++i){
-           v1[i] = v1[i]/magnitude;
+           v1[i] = v1[i]/magnitude;  // Divide each element by magnitude to normalize.
         }
         // Don't delete the return statement.
         return this;
