@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asg1: Paint Program</title>
+</head>
+
+<body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+        Please use a browser that supports "canvas"
+    </canvas>
+    <br>
+
+    <div id="imageContainer">
+        <img src="mountain.jpg" alt="Mountain" width="50%" height="auto">
+    </div>
+
+    <p>
+        <button type="button" id="clear">Clear the Canvas</button>
+    </p>
+
+    <button type="button" id="pointButton">Point</button>
+    <button type="button" id="triButton">Triangle</button>
+    <button type="button" id="circleButton">Circle</button>
+    <button type="button" id="starButton">Ninja Star</button> 
+    <button type="button" id="mountainButton">Mountain</button> <!-- New button for mountain range -->
+    <p>
+
+    <p style="font-family:Arial">Adjust Colors:</p>
+
+    Red   <input type="range" min="0" max="100" value="100" class="slider" id="redSlide"/>
+    Green <input type="range" min="0" max="100" value="100" class="slider" id="greenSlide"/>
+    Blue  <input type="range" min="0" max="100" value="100" class="slider" id="blueSlide"/> 
+    <p>
+
+    <p style="font-family:Arial">Adjust Size and Segments:</p>
+    Shape Size
+    <input type="range" min="5" max="60" value="5" class="slider" id="sizeSlide"/> 
+    Adjust # of segments for Circle and Star: 
+    <label id="numside">10</label>
+    <input type="range" min="3" max="30" value="5" class="slider" id="segmentSlide"/> 
+    <p>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Point.js"></script>
+    <script src="Star.js"></script> 
+    <script src="Mountainrange.js"></script> <!-- Include the MountainRange class -->
+    <script src="asg1.js"></script> <!-- Include the main script -->
+</body>
+</html>
