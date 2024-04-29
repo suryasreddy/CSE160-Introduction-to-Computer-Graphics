@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Blocky Animal</title>
+    <style>
+        #turtle-title {
+            color: #3A5F0B; /* Dark green color reflecting the turtle theme */
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+            padding: 20px;
+            border: 4px dashed #006400; /* Darker green for the border */
+            border-radius: 10px;
+            background-color: #8FBC8F; /* Light green for the background */
+            box-shadow: 0 0 10px #3A5F0B; /* Subtle green shadow for a glowing effect */
+        }
+        #numdot {
+            position: absolute;
+            top: 150px; /* Adjust position to accommodate the new larger title */
+            left: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .btn_fancy_button {
+            background-color: #85501b; /* Brown */
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .camera-instructions {
+            display: block;
+            margin-top: 10px;
+            border: 2px solid blue;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .hyper-bowser {
+            display: block;
+            margin-top: 5px;
+            border: 3px solid red;
+            padding: 5px;
+            font-size: 16px;
+            color: red;
+        }
+    </style>
+</head>
+<body onload="main()">
+    <canvas id="canvas" width="550" height="550">Please use a browser that supports "canvas"</canvas>
+    <div id="turtle-title">Meet Bowser!</div>
+    <label class="camera-instructions">Click and drag to move the camera around. If the canvas goes blank, click "Reset Camera" or refresh your page.</label>
+    <label class="hyper-bowser">Shift+click to meet Angry Bowser!</label>
+    <div id="numdot">ms: 0 fps: 0</div>
+    <div>
+        <input type="button" id="cam_reset" class="btn_fancy_button" value="Reset Camera">
+        <label>Rotate camera</label>
+        <input type="range" id="y_angle" name="y_angle" min="-180" max="180" value="0" class="slider">
+    </div>
+    <div>
+        <label>Animations:</label>
+        <input type="button" id="animation_on" class="btn_fancy_button" value="On">
+        <input type="button" id="animation_off" class="btn_fancy_button" value="Off">
+    </div>
+    <div>
+        <label>Rotate tail:</label>
+        <input type="range" id="tail_move" min="-10" max="10" value="0">
+        <label>Rotate front flippers:</label>
+        <input type="range" id="front_flipper_move" min="-90" max="90" value="0">
+        <label>Rotate rear legs:</label>
+        <input type="range" id="rear_leg_move" min="0" max="180" value="0">
+        <label>Rotate rear flippers:</label>
+        <input type="range" id="rear_flipper_move" min="-90" max="90" value="0">
+    </div>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Point.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Cone.js"></script>
+    <script src="asg2.js"></script>
+</body>
+</html>
+
+
+
