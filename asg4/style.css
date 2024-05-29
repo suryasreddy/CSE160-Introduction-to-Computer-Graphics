@@ -1,0 +1,62 @@
+body {
+    background-color: #282c34;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 20px;
+}
+
+canvas {
+    border: 5px solid #4CAF50;
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #FFD700;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.welcome-box, .settings-box {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+h1, h2, .button {
+    color: #FFD700;
+}
+
+.movement p, .controls p, .normal-controls p, .light-controls p, .animation-controls p {
+    margin: 5px;
+    color: #FFD700; 
+}
+
+label {
+    font-weight: bold;
+    color: #FFF; 
+}
+
+.slider {
+    width: 100%; 
+    background: #FFF; 
+}

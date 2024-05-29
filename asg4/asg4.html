@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Surya Reddy's Lit Blocky World</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body onload="main()">
+    <div class="game-container">
+        <canvas id="webgl" width="700" height="700">
+            Please use a browser that supports "canvas"
+        </canvas>
+        <div class="control-panel">
+            <div class="welcome-box">
+                <h1>Welcome to Hide and Seek in Bowser's Castle! >o_o<</h1>
+                <p>Instructions: Click "Spawn Baby Bowser" once and use the WASD controls to find him!</p>
+                <button class="button" id="view_bowser">Spawn Baby Bowser!</button>
+            </div>
+            <div class="settings-box">
+                <section class="normal-controls">
+                    <h2>--- Normal Controls ---</h2>
+                    <p>
+                        <button class="button" id="normalOn">Normal On</button>
+                        <button class="button" id="normalOff">Normal Off</button>
+                    </p>
+                </section>
+                <section class="light-controls">
+                    <h2>Light Controls</h2>
+                    <p>
+                        <button class="button" id="lightSwitch">Light Toggle</button>
+                    </p>
+                    Light X <input type="range" min="-25" max="25" value="0" class="slider" id="lightX"/><br>
+                    Light Y <input type="range" min="-25" max="55" value="25" class="slider" id="lightY"/><br>
+                    Light Z <input type="range" min="-25" max="25" value="0" class="slider" id="lightZ"/>
+                </section>
+                <section class="animation-controls">
+                    <h2>Sun Animation</h2>
+                    <p>
+                        <button class="button" id="animaSun">Animation Toggle</button>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+        <div class="controls">
+            <h1>Welcome to Hide and Seek in Bowser's Castle! >o_o<</h1>
+            <p>Instructions: Click "Spawn Baby Bowser" once and use the WASD controls to find him!</p>
+            <button class="button" id="view_bowser">Spawn Baby Bowser!</button>
+            <div>
+                <label>Animations:</label>
+                <button class="button" id="animation_on">On</button>
+                <button class="button" id="animation_off">Off</button>
+            </div>
+            <div class="movement">
+                <h2>Controls</h2>
+                <p>W - Forwards</p>
+                <p>S - Backwards</p>
+                <p>A - Move Left</p>
+                <p>D - Move Right</p>
+                <p>Q - Look Left</p>
+                <p>E - Look Right</p>
+                <p>Z - Move Up</p>
+                <p>X - Move Down</p>
+            </div>
+        </div>
+    </div>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Point.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Sphere.js"></script>
+    <script src="Cone.js"></script>
+    <script src="Camera.js"></script>
+    <script src="asg4.js"></script>
+    <script src="renderBowser.js"></script>
+</body>
+</html>
